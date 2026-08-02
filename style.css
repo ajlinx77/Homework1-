@@ -1,4 +1,3 @@
-/* Type Selector */
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #eaf4f4;
@@ -6,6 +5,46 @@ body {
 
     margin: 0;
     padding: 0;
+}
+
+
+/* Header */
+#G23366010 {
+    background-color: #006d77;
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+    margin: 20px;
+
+    border: 5px solid #ffddd2;
+    border-radius: 12px;
+}
+
+
+/* Grid Multi-Column Layout */
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+/* Section Cards */
+.web-development {
+
+    background-color: white;
+
+    padding: 20px;
+
+    border: 3px solid #83c5be;
+    border-radius: 10px;
+
 }
 
 
@@ -20,37 +59,7 @@ p {
 }
 
 
-/* ID Selector */
-#G23366010 {
-
-    background-color: #006d77;
-    color: white;
-
-    text-align: center;
-
-    padding: 25px;
-    margin: 20px;
-
-    border: 5px solid #ffddd2;
-    border-radius: 12px;
-}
-
-
-
-/* Class Selector */
-.web-development {
-
-    background-color: white;
-
-    margin: 20px;
-    padding: 20px;
-
-    border: 3px solid #83c5be;
-    border-radius: 10px;
-}
-
-
-
+/* List */
 ul {
 
     background-color: #edf6f9;
@@ -63,15 +72,49 @@ ul {
 }
 
 
-
+/* Responsive Image */
 img {
 
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
 
     padding: 10px;
     margin: 20px;
 
     border: 5px solid #006d77;
     border-radius: 10px;
+
+}
+
+
+/* Tablet View - 768px */
+@media (max-width: 768px) {
+
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* Mobile View - 320px */
+@media (max-width: 320px) {
+
+    main {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+
+    #G23366010 {
+        font-size: 24px;
+        margin: 10px;
+    }
+
+
+    .web-development {
+        padding: 15px;
+    }
 
 }
